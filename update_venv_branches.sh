@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $# != 1 ]; then
+if [ $# != 2 ]; then
     echo "usage: $0 <filename> <branch-prefix>"
     echo "e.g. $0 file.txt venv-"
     exit;
