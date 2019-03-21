@@ -28,7 +28,7 @@ read -r -p "Are you sure? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
     for branch in ${branches[@]}; do
-        if [[ ${branch} != ${curr_branch} ]] && [[ ${branch} == ${branch_prefix}* ]]; then
+        if [[ ${branch} != ${curr_branch} ]] && [[ ${branch} == ${branch_prefix}* ]] && [[ ${branch} == "br_1" ]]; then
             echo "Copying $filename in $branch from $curr_branch"
             git checkout "${branch}"
             git checkout "${curr_branch}" -- "$filename"
